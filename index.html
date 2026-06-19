@@ -138,7 +138,7 @@
                 <div class="space-y-4 mb-8">
                     <div class="flex items-center gap-3">
                         <svg class="w-5 h-5 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
-                        <span class="text-brand-black font-medium">27 DE JUNIO</span>
+                        <span class="text-brand-black font-medium">Sábado 27 de Junio</span>
                     </div>
                     <div class="flex items-center gap-3">
                         <svg class="w-5 h-5 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
@@ -177,6 +177,10 @@
             
             <div class="swiper tiktok-swiper pb-12">
                 <div class="swiper-wrapper">
+                    <!-- TikTok 4 (CrystalKind) AHORA DE PRIMERO -->
+                    <div class="swiper-slide flex justify-center">
+                        <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@crystalkindperu/video/7619086022722211085" data-video-id="7619086022722211085" style="max-width: 605px;min-width: 325px;" > <section> </section> </blockquote>
+                    </div>
                     <!-- TikTok 1 -->
                     <div class="swiper-slide flex justify-center">
                         <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@loubotanicals/video/7642862790864309511" data-video-id="7642862790864309511" style="max-width: 605px;min-width: 325px;" > <section> </section> </blockquote>
@@ -188,10 +192,6 @@
                     <!-- TikTok 3 (CrystalKind) -->
                     <div class="swiper-slide flex justify-center">
                         <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@crystalkindperu/video/7504058078799744302" data-video-id="7504058078799744302" style="max-width: 605px;min-width: 325px;" > <section> </section> </blockquote>
-                    </div>
-                    <!-- TikTok 4 (CrystalKind) -->
-                    <div class="swiper-slide flex justify-center">
-                        <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@crystalkindperu/video/7619086022722211085" data-video-id="7619086022722211085" style="max-width: 605px;min-width: 325px;" > <section> </section> </blockquote>
                     </div>
                 </div>
                 <div class="swiper-pagination"></div>
@@ -337,18 +337,38 @@
                     </select>
                 </div>
 
+                <!-- Monto fijo a pagar -->
+                <div class="bg-gray-50 border border-gray-200 rounded-lg p-4 flex items-center justify-between mt-2">
+                    <span class="text-sm text-gray-600">Inscripción total:</span>
+                    <span class="font-serif text-lg text-brand-black font-semibold">S/ 29.90</span>
+                </div>
+
                 <button type="submit" class="w-full bg-brand-black text-brand-white py-4 rounded-lg font-medium tracking-wide hover:bg-gray-800 transition-colors mt-4 shadow-md flex items-center justify-center gap-2">
                     <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"></path></svg>
-                    Confirmar mi cupo por WhatsApp
+                    Confirmar mi cupo por S/ 29.90
                 </button>
             </form>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-brand-white py-8 border-t border-brand-beigeDark text-center">
+    <footer class="bg-brand-white py-8 border-t border-brand-beigeDark text-center pb-28 md:pb-8">
         <p class="text-sm text-gray-400 font-light">&copy; 2026 Lou Botanicals & CrystalKind. Todos los derechos reservados.</p>
     </footer>
+
+    <!-- Barra Flotante de Registro (Persuasiva) -->
+    <div class="fixed bottom-0 left-0 w-full bg-brand-white border-t border-brand-beigeDark shadow-[0_-10px_15px_-3px_rgba(0,0,0,0.05)] z-50 p-4 md:px-6 flex items-center justify-between gap-4">
+        <div class="hidden md:block">
+            <p class="text-sm font-medium text-brand-black">Taller de Vision Board</p>
+            <p class="text-xs text-gray-500">Sábado 27 de Junio • S/ 29.90</p>
+        </div>
+        <div class="flex-1 md:flex-none flex flex-col md:flex-row items-center gap-2 md:gap-6 justify-center">
+            <p class="text-xs md:text-sm font-semibold text-red-600 pulse-text">¡Últimos 17 cupos!</p>
+            <a href="#registro" class="block w-full md:w-auto bg-brand-black text-brand-white px-8 py-3 rounded-full text-sm font-medium hover:bg-gray-800 transition shadow-lg text-center">
+                Separar mi cupo ahora
+            </a>
+        </div>
+    </div>
 
     <!-- Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
@@ -395,10 +415,10 @@
             const payment = document.getElementById('payment').value;
 
             // Formato de mensaje
-            const message = `¡Hola! Quiero separar un cupo para el Taller de Vision Board del 27 de junio.%0A%0A*Mis datos:*%0A- Nombre: ${name}%0A- Celular: ${phone}%0A- Correo: ${email}%0A- Pago preferido: ${payment}%0A%0A¡Por favor, confírmenme los datos para realizar el pago!`;
+            const message = `¡Hola! Quiero separar un cupo para el Taller de Vision Board del sábado 27 de junio.%0A%0A*Mis datos:*%0A- Nombre: ${name}%0A- Celular: ${phone}%0A- Correo: ${email}%0A- Pago preferido: ${payment}%0A%0A*Monto a pagar:* S/ 29.90%0A%0A¡Por favor, confírmenme los datos de la cuenta para realizar el pago!`;
             
-            // NUMERO DE WHATSAPP AQUI (Reemplaza el 51999999999 por tu número real)
-            const waLink = `https://wa.me/51999999999?text=${message}`;
+            // NUMERO DE WHATSAPP ACTUALIZADO
+            const waLink = `https://wa.me/51934059023?text=${message}`;
             
             // Abrir WhatsApp en nueva pestaña
             window.open(waLink, '_blank');
@@ -432,6 +452,38 @@
             document.getElementById('minutes').innerText = minutes < 10 ? '0' + minutes : minutes;
             document.getElementById('seconds').innerText = seconds < 10 ? '0' + seconds : seconds;
         }, 1000);
+
+        // Lógica de Cupos Dinámicos (Reduce 2 por día)
+        function updateDynamicSpots() {
+            // Fecha base: 19 de Junio 2026 (empieza en 17 cupos)
+            const baseDate = new Date("June 19, 2026 00:00:00").getTime();
+            const initialSpots = 17;
+            const decreasePerDay = 2;
+            
+            const now = new Date().getTime();
+            const distance = now - baseDate;
+            
+            // Calculamos días transcurridos
+            let daysPassed = Math.floor(distance / (1000 * 60 * 60 * 24));
+            if (daysPassed < 0) daysPassed = 0; // Evitar errores si se abre antes de la fecha base
+            
+            let currentSpots = initialSpots - (daysPassed * decreasePerDay);
+            
+            // Límite: Nunca bajará de 2 cupos para no "cerrar" las ventas visualmente
+            if (currentSpots < 2) {
+                currentSpots = 2;
+            }
+
+            // Actualizamos los textos en el HTML
+            const heroSpots = document.getElementById('hero-spots');
+            const floatingSpots = document.getElementById('floating-spots');
+            
+            if (heroSpots) heroSpots.innerText = `Últimos ${currentSpots} cupos disponibles`;
+            if (floatingSpots) floatingSpots.innerText = `¡Últimos ${currentSpots} cupos!`;
+        }
+        
+        // Ejecutar al cargar la página
+        updateDynamicSpots();
     </script>
 </body>
 </html>
